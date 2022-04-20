@@ -16,6 +16,6 @@ class Optimizer:
         Обновление весов сетки
         :param dvec: производная весов
         :param vec: веса
-        :return:
+        :return: обновленные значения весов (смещений)
         """
         pass

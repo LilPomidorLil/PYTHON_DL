@@ -8,14 +8,14 @@ class Layer:
     """
 
     def __init__(self, in_size: int, out_size: int):
-        self._m_in_size = in_size
-        self._m_out_size = out_size
+        self.__m_in_size = in_size
+        self.__m_out_size = out_size
 
     def in_size(self):
-        return self._m_in_size
+        return self.__m_in_size
 
     def out_size(self):
-        return self._m_out_size
+        return self.__m_out_size
 
     def init(self, mu: float, sigma: float, Activation: Activation):
         """
@@ -23,6 +23,7 @@ class Layer:
 
         :param mu: мат.ожидание
         :param sigma: дисперсия
+        :param Activation: функция активации, которая будет применена к этому слою
         :return: None
         """
         pass
