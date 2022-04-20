@@ -160,5 +160,5 @@ class NeuralNetwork:
         if nlayer <= 0: return ARRAY
 
         self.forward(x)
-        
+
         return self.m_layers[-1].output()
