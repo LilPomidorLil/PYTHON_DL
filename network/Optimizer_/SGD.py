@@ -8,7 +8,7 @@ class SGD(Optimizer):
 
     Стохастический градиентный спуск
     """
-    def __init__(self, lrate: float, decay: float):
+    def __init__(self, lrate: float = 0.01, decay: float = 0):
         """
         Инициализация класса
         :param lrate: длина шага
