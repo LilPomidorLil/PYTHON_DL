@@ -1,4 +1,4 @@
-from network.OptimiZer import Optimizer
+from ..OPTIMIZER import Optimizer
 
 from numpy import ndarray as ARRAY
 

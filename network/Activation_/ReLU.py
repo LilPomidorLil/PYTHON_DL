@@ -1,5 +1,5 @@
-from network.Activation import Activation
-from network.Activation import ARRAY
+from ..ACTIVATION import Activation
+from ..ACTIVATION import ARRAY
 
 import numpy as np
 

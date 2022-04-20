@@ -1,6 +1,6 @@
 import numpy as np
 
-from network.Output import Output
+from ..OUTPUT import Output
 
 from numpy import ndarray as ARRAY
 

@@ -1,6 +1,5 @@
 from numpy import ndarray as ARRAY
-from network.OptimiZer import Optimizer
-from network.Activation import Activation
+from .OPTIMIZER import Optimizer
 
 class Layer:
     """
@@ -17,13 +16,12 @@ class Layer:
     def out_size(self):
         return self.__m_out_size
 
-    def init(self, mu: float, sigma: float, Activation: Activation):
+    def init(self, mu: float, sigma: float):
         """
         Инициализация слоя
 
         :param mu: мат.ожидание
         :param sigma: дисперсия
-        :param Activation: функция активации, которая будет применена к этому слою
         :return: None
         """
         pass

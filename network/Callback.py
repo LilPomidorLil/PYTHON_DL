@@ -1,5 +1,3 @@
-from NeuralNetwork import NeuralNetwork
-
 from numpy import ndarray as ARRAY
 
 class Callback:
@@ -15,7 +13,7 @@ class Callback:
         self._m_batch_id = m_batch_id
         self._m_epoch_id = m_epoch_id
 
-    def pre_trained_batch(self, net: NeuralNetwork, sub_X: ARRAY, y: ARRAY):
+    def pre_trained_batch(self, net, sub_X: ARRAY, y: ARRAY):
         """
         Срабатывает до прохода батча по сетке
 
@@ -26,7 +24,7 @@ class Callback:
         """
         pass
 
-    def post_trained_batch(self, net: NeuralNetwork, sub_X: ARRAY, y: ARRAY):
+    def post_trained_batch(self, net, sub_X: ARRAY, y: ARRAY):
         """
         Срабатывает после прохода батча по сетке
 

@@ -1,6 +1,6 @@
-from network.Layer import Layer
-from network.Activation import Activation
-from network.OptimiZer import Optimizer
+from ..LAYER import Layer
+from ..ACTIVATION import Activation
+from ..OPTIMIZER import Optimizer
 
 from numpy import ndarray as ARRAY
 import numpy as np
@@ -13,10 +13,11 @@ class FullyConnected(Layer):
     """
 
 
-    def __init__(self, in_size: int, out_size: int):
+    def __init__(self, in_size: int, out_size: int, Activation: Activation):
         super(FullyConnected, self).__init__(in_size=in_size, out_size=out_size)
+        self.__Activation = Activation
 
-    def init(self, mu: float, sigma: float, Activation: Activation):
+    def init(self, mu: float, sigma: float):
         self.__m_weight = np.ndarray(shape=(self.__m_in_size, self.__m_out_size),
                                     buffer=np.random.normal(size = (self.__m_in_size, self.__m_out_size), scale=sigma, loc=mu))
 
@@ -25,7 +26,7 @@ class FullyConnected(Layer):
         self.__m_dw = np.empty(shape = (self.__m_in_size, self.__m_out_size))
         self.__m_db = np.empty(shape = (self.__m_out_size, 1))
 
-        self.__Activation = Activation
+
 
     def forward(self, prev_layer_data: ARRAY):
         ncols = prev_layer_data.shape[1]
