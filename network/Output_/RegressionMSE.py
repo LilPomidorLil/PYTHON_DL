@@ -5,6 +5,9 @@ from network.Output import Output
 from numpy import ndarray as ARRAY
 
 class RegressionMSE(Output):
+    """
+    Подсчет ошибки на последнем слое как задача регрессии - ошибка MSE
+    """
     def evaluate(self, prev_layer_data: ARRAY, target: ARRAY):
         nrows, ncols = prev_layer_data.shape
 
@@ -20,4 +23,3 @@ class RegressionMSE(Output):
     def loss(self):
         return 0.5 * np.square(self.__m_din).sum()
 
-    
