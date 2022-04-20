@@ -1,5 +1,6 @@
 from numpy import ndarray as ARRAY
-from OptimiZer import Optimizer
+from network.OptimiZer import Optimizer
+from network.Activation import Activation
 
 class Layer:
     """
@@ -7,16 +8,16 @@ class Layer:
     """
 
     def __init__(self, in_size: int, out_size: int):
-        self.__m_in_size = in_size
-        self.__m_out_size = out_size
+        self._m_in_size = in_size
+        self._m_out_size = out_size
 
     def in_size(self):
-        return self.__m_in_size
+        return self._m_in_size
 
     def out_size(self):
-        return self.__m_out_size
+        return self._m_out_size
 
-    def init(self, mu: float, sigma: float):
+    def init(self, mu: float, sigma: float, Activation: Activation):
         """
         Инициализация слоя
 
